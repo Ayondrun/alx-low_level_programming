@@ -1,23 +1,17 @@
-#include <stdlib.h>
-
-#include <time.h>
-
 #include <stdio.h>
+
 /**
+ * main - Prints the alphabetic
  *
- * main - Entry point
- *
- * Return: Always 0 (Success)
- *
+ * Return: Always (Success)
  */
-
 int main(void)
-
 {
-	int n;
+	char c;
 
-	srand(time(0));
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
 
-	n = rand() - RAND_MAX / 2;
-
-	srand(time(0));
+	putchar('\n');
+	return (0);
+}
