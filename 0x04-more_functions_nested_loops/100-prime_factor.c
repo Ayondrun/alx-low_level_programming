@@ -8,7 +8,7 @@
 int main(void)
 {
 	long int b, bp;
-	
+
 	b = 612852475143;
 	for (bp = 2; bp <= b; bp++)
 	{
