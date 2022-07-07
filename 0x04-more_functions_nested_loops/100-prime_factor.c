@@ -7,19 +7,17 @@
  */
 int main(void)
 {
-	long x, maxf;
-	long number = 612852475143;
-	double square = sqrt(number);
-
-	for (x = 1; x <= square; x++)
+	long int b, bp;
+	
+	b = 612852475143;
+	for (bp = 2; bp <= b; bp++)
 	{
-		if (number % x == 0)
+		if (b % bp == 0)
 		{
-			maxf = number / x;
+			b /= bp;
+			bp--;
 		}
 	}
-
-	printf("%ld\n", maxf);
-
+	printf("%ld\n", bp);
 	return (0);
 }
