@@ -1,46 +1,34 @@
 #include "main.h"
 
 /**
- * _strspn - Locates a character in a string
- * @s: This is the main C string to be scanned.
- * @accept: This is the string containing the list of characters to match in s
- * Return: return count
- **/
-
+  * _strspn - search a string for a set of bytes
+  * @s: source string
+  * @accept: accepted string
+  *
+  * Return: number of bytes in the init segment
+  */
 unsigned int _strspn(char *s, char *accept)
-
 {
-	int i, j;
-	int count = 0;
-	char *str1, *str2;
+	unsigned int a = 0, b, t = 0;
 
-	str1 = s;
-	str2 = accept;
-
-	i = 0;
-	while (str1[i] != '\0') /*Declaring WHILE *s */
+	while (accept[a])
 	{
-		j = 0;
-		while (str2[j] != '\0') /*Declaring WHILE *accept*/
+		b = 0;
+
+		while (s[b] != 32)
 		{
-			if (str2[j] == str1[i]) /*Evaluate condition*/
+			if (accept[a] == s[b])
 			{
-				count++; /*count number*/
-				break;
+				t++;
 			}
 
-			j++;    /*add j+1*/
+			b++;
 		}
 
-		if (s[i] != accept[j]) /*If aren't equals*/
-		{
-			break;
-		}
-
-		i++; /*add x+1*/
+		a++;
 	}
 
-	return (count); /*return the value of count*/
+	return (t);
 }
 ~
 ~
