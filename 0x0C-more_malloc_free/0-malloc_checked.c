@@ -3,19 +3,19 @@
 #include <stdio.h>
 
 /**
- * malloc_checked - allocates memory using malloc
- *
- * @b: amount of bytes
- * Return: pointer to our new allocated memory
- * exit with 98 if malloc fails
- */
-
+  * malloc_checked - Allocates memory
+  * @b: the size to allocate
+  *
+  * Return: Nothing.
+  */
 void *malloc_checked(unsigned int b)
 {
-	void *new_mem;
+	void *p;
 
-	new_mem = malloc(b);
-	if (new_mem == NULL)
+	p = malloc(b);
+
+	if (p == NULL)
 		exit(98);
-	return (new_mem);
+
+	return (p);
 }
