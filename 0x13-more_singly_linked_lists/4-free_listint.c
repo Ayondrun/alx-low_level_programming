@@ -1,17 +1,17 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * free_list - Free all malloced spaced of a list
- * @head: Pointer to the start of the list
+ * free_listint - Frees a listint_t list.
+ * @head: A pointer to the head of the listint_t list to be freed.
  */
-void free_list(list_t *head)
+void free_listint(listint_t *head)
 {
-	if (head != NULL)
+	listint_t *tmp;
+
+	while (head)
 	{
-		if (head->next != NULL)
-			free_list(head->next);
-		free(head->str);
+		tmp = head->next;
 		free(head);
+		head = tmp;
 	}
 }
